@@ -1,0 +1,547 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{53F658CB-1C85-4DC5-8100-01914AB25A09}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CVRANTICRASH</RootNamespace>
+    <AssemblyName>CVRANTICRASH</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <LangVersion>9.0</LangVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Accessibility" />
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="AssetRipper.VersionUtilities">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\AssetRipper.VersionUtilities.dll</HintPath>
+    </Reference>
+    <Reference Include="AssetsTools.NET">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\AssetsTools.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="Aura2_Core">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Aura2_Core.dll</HintPath>
+    </Reference>
+    <Reference Include="AVProVideo.Demos">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\AVProVideo.Demos.dll</HintPath>
+    </Reference>
+    <Reference Include="AVProVideo.Extensions.Timeline">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\AVProVideo.Extensions.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="AVProVideo.Extensions.UnityUI">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\AVProVideo.Extensions.UnityUI.dll</HintPath>
+    </Reference>
+    <Reference Include="AVProVideo.Extensions.VisualEffectGraph">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\AVProVideo.Extensions.VisualEffectGraph.dll</HintPath>
+    </Reference>
+    <Reference Include="AVProVideo.Runtime">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\AVProVideo.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="AwesomeTechnologies.TouchReactSystemPro.Runtime">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\AwesomeTechnologies.TouchReactSystemPro.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="AwesomeTechnologies.VegetationStudioPro.Runtime">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\AwesomeTechnologies.VegetationStudioPro.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Bhaptics.Tact">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Bhaptics.Tact.dll</HintPath>
+    </Reference>
+    <Reference Include="Boxophobic.TheVehetationEngine.Runtime">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Boxophobic.TheVehetationEngine.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Boxophobic.Utils.Scripts">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Boxophobic.Utils.Scripts.dll</HintPath>
+    </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Cinemachine.dll</HintPath>
+    </Reference>
+    <Reference Include="cohtml.Net">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\cohtml.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Cohtml.RenderingBackend">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Cohtml.RenderingBackend.dll</HintPath>
+    </Reference>
+    <Reference Include="Cohtml.Runtime">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Cohtml.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Crc32.NET">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Crc32.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="DarkRift">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\DarkRift.dll</HintPath>
+    </Reference>
+    <Reference Include="DarkRift.Client">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\DarkRift.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="DarkRift.Server">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\DarkRift.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="DissonanceVoip">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\DissonanceVoip.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="MagicaCloth">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\MagicaCloth.dll</HintPath>
+    </Reference>
+    <Reference Include="MelonLoader">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\MelonLoader.dll</HintPath>
+    </Reference>
+    <Reference Include="MeshBakerCore">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\MeshBakerCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Mdb">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Mono.Cecil.Mdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Pdb">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Mono.Cecil.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Rocks">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Mono.Cecil.Rocks.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Data.Sqlite">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Mono.Data.Sqlite.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Posix">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Mono.Posix.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Security">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.WebBrowser">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Mono.WebBrowser.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.RuntimeDetour">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\MonoMod.RuntimeDetour.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.Utils">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\MonoMod.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="MPUIKit">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\MPUIKit.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NicoKuroKusagi">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\NicoKuroKusagi.dll</HintPath>
+    </Reference>
+    <Reference Include="Novell.Directory.Ldap">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Novell.Directory.Ldap.dll</HintPath>
+    </Reference>
+    <Reference Include="PWCommon3DLL, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\PWCommon3DLL.dll</HintPath>
+    </Reference>
+    <Reference Include="QHierarchyNullable">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\QHierarchyNullable.dll</HintPath>
+    </Reference>
+    <Reference Include="QHierarchyRuntime">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\QHierarchyRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="SALSA">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\SALSA.dll</HintPath>
+    </Reference>
+    <Reference Include="SALSA-LipSync">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\SALSA-LipSync.dll</HintPath>
+    </Reference>
+    <Reference Include="ShapesRuntime">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\ShapesRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="SteamAudioUnity">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\SteamAudioUnity.dll</HintPath>
+    </Reference>
+    <Reference Include="SteamVR">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\SteamVR.dll</HintPath>
+    </Reference>
+    <Reference Include="SteamVR_Actions">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\SteamVR_Actions.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Tobii.GameIntegration.Net">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Tobii.GameIntegration.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="TobiiXRCore">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\TobiiXRCore.dll</HintPath>
+    </Reference>
+    <Reference Include="TobiiXRDevTools">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\TobiiXRDevTools.dll</HintPath>
+    </Reference>
+    <Reference Include="TobiiXRG2OM">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\TobiiXRG2OM.dll</HintPath>
+    </Reference>
+    <Reference Include="TobiiXRSDK">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\TobiiXRSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="Tomlet">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Tomlet.dll</HintPath>
+    </Reference>
+    <Reference Include="UniTask">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UniTask.dll</HintPath>
+    </Reference>
+    <Reference Include="UniTask.Addressables">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UniTask.Addressables.dll</HintPath>
+    </Reference>
+    <Reference Include="UniTask.DOTween">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UniTask.DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="UniTask.Linq">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UniTask.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="UniTask.TextMeshPro">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UniTask.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Analytics.DataPrivacy">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Unity.Analytics.DataPrivacy.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Build.SlimPlayerRuntime">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Unity.Build.SlimPlayerRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Unity.Burst.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Unsafe">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Unity.Burst.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Collections">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Unity.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Deformations">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Unity.Deformations.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Entities">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Unity.Entities.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Entities.Hybrid">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Unity.Entities.Hybrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InternalAPIEngineBridge.003">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Unity.InternalAPIEngineBridge.003.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Jobs">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Unity.Jobs.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Unity.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics.Extensions">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Unity.Mathematics.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics.Extensions.Hybrid">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Unity.Mathematics.Extensions.Hybrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Platforms.Common">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Unity.Platforms.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Polybrush">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Unity.Polybrush.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Postprocessing.Runtime">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Unity.Postprocessing.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Unity.ProBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder.KdTree">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Unity.ProBuilder.KdTree.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder.Poly2Tri">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Unity.ProBuilder.Poly2Tri.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder.Stl">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Unity.ProBuilder.Stl.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Properties">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Unity.Properties.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Properties.Reflection">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Unity.Properties.Reflection.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Properties.UI">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Unity.Properties.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Scenes.Hybrid">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Unity.Scenes.Hybrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ScriptableBuildPipeline">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Unity.ScriptableBuildPipeline.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Serialization">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Unity.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Unity.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Transforms">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Unity.Transforms.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Transforms.Hybrid">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Unity.Transforms.Hybrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VectorGraphics">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Unity.VectorGraphics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AccessibilityModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.AccessibilityModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Advertisements">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.Advertisements.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AIModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.AIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AndroidJNIModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.AndroidJNIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ARModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.ARModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClothModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.ClothModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterInputModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.ClusterInputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterRendererModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.ClusterRendererModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CrashReportingModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.CrashReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DirectorModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.DirectorModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DSPGraphModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.DSPGraphModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GameCenterModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.GameCenterModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GridModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.GridModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HotReloadModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.HotReloadModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.InputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.LocalizationModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.LocalizationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Monetization">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.Monetization.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PerformanceReportingModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.PerformanceReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ProfilerModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.ProfilerModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.ScreenCaptureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.SharedInternalsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteMaskModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.SpriteMaskModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteShapeModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.SpriteShapeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StreamingModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.StreamingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubstanceModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.SubstanceModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubsystemsModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.SubsystemsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.TerrainModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainPhysicsModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.TextCoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.TilemapModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TLSModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.TLSModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.UIElementsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UmbraModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.UmbraModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UNETModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.UNETModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityConnectModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityTestProtocolModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VehiclesModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.VehiclesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VFXModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.VFXModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.VideoModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.VRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.WindModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.WindModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.XRModule">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\UnityEngine.XRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Valve.Newtonsoft.Json">
+      <HintPath>..\..\..\..\Videos\TestMod-master\TestMod-master\Output\Valve.Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Config.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(TargetPath)" "C:\Program Files (x86)\Steam\steamapps\common\ChilloutVR\Mods" /Y /I
+</PostBuildEvent>
+  </PropertyGroup>
+</Project>
