@@ -11,32 +11,14 @@ using System.Threading.Tasks;
 namespace CVRANTICRASH
 {
     
-    internal class CustomContractResolver : DefaultContractResolver
-    {
-        private readonly string propertyNameToExclude;
-
-        internal CustomContractResolver(string propertyNameToExclude)
-        {
-            this.propertyNameToExclude = propertyNameToExclude;
-        }
-
-        protected override IList<JsonProperty> CreateProperties(Type type, MemberSerialization memberSerialization)
-        {
-            IList<JsonProperty> source = base.CreateProperties(type, memberSerialization);
-            return source.Where((JsonProperty p) => string.Compare(p.PropertyName, propertyNameToExclude, StringComparison.OrdinalIgnoreCase) != 0).ToList();
-        }
-    }
+  
     internal class ConfigMan
     {
         public static Config GetConfig()
         {
             return config;
         }
-        internal static readonly JsonSerializerSettings jsonSerializerSettings = new JsonSerializerSettings
-        {
-            ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
-            ContractResolver = new CustomContractResolver("normalized")
-        };
+  
         internal static Config config;
         public static void SaveConfig()
         {
