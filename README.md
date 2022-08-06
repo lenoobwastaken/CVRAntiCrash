@@ -20,7 +20,7 @@ TODO LIST:
 2 - more protections
 
 
-3 - (unlikely but possible) corrupted assetbundle sandbox 
+3 - (unlikely but might do it) corrupted assetbundle sandbox 
 
 
 
