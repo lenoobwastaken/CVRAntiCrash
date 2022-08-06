@@ -12,6 +12,15 @@ Nocturnal For patch
 Munchen (inspired anti crash off of it)
 
 
+TODO LIST:
+
+1 - user customizable limiter
+
+
+2 - more protections
+
+
+3 - (unlikely but possible) corrupted assetbundle sandbox 
 
 
 
