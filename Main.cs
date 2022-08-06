@@ -76,11 +76,7 @@ namespace CVRANTICRASH
         {
             CheckProp();
         }
-      
-        public static void ViewDropTextPatch(string __0, string __1)
-        {
-            __0 += "Joe \n";
-        }
+     
         private static  void Patch()
         {
             Instance.Patch(typeof(ABI.CCK.Components.CVRPickupObject).GetMethod(nameof(ABI.CCK.Components.CVRPickupObject.Start)), null, typeof(Main).GetMethod(nameof(OnPickupStart), System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.NonPublic).ToNewHarmonyMethod());
